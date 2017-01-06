@@ -6,9 +6,9 @@ using System.Web;
 
 namespace reactapplication.ViewModels
 {
-    public class AppUser : ClaimsPrincipal
+    public class AppUserPrincipal : ClaimsPrincipal
     {
-        public AppUser(ClaimsPrincipal principal)
+        public AppUserPrincipal(ClaimsPrincipal principal)
        : base(principal)
         {
         }
@@ -19,12 +19,12 @@ namespace reactapplication.ViewModels
                 return this.FindFirst(ClaimTypes.Name).Value;
             }
         }
-        public string Country
-        {
-            get
-            {
-                return this.FindFirst(ClaimTypes.Country).Value;
-            }
-        }
+        //public string Country
+        //{
+        //    get
+        //    {
+        //        return this.FindFirst(ClaimTypes.Country).Value;
+        //    }
+        //}
     }
 }
